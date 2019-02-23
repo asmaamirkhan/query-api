@@ -5,9 +5,10 @@ function is_auth(req, res, next) {
     jwt.verify(req.headers["x-access-token"], "ESMA", function(err, decoded) {
       if (err) {
         res.json(res_fun.failure_func("failed", req.body, "Invalid token"));
+      } else {
+        console.log(decoded);
+        next();
       }
-      console.log(decoded);
-      next();
     });
   } else {
     next();

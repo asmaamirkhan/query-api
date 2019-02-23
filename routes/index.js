@@ -3,7 +3,6 @@ var router = express.Router();
 var db_conn = require("./sql_conn");
 var res_fun = require("./response_func");
 
-
 /*router.post("/sql", function(req, res) {
   let query = req.body.sql;
   db_conn.query(query, function(error, results) {
@@ -45,8 +44,5 @@ var res_fun = require("./response_func");
     });
   });
 });*/
-
-
-
 
 module.exports = router;
